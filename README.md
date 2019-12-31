@@ -4,7 +4,7 @@ ZMonitor is an android app to view up to four live streams at once (useful for s
 
 ## Installation
 Compile and run yourself or 
-<a href="https://play.google.com/store/apps/details?id=com.vbridgelal.zmonitor"><img src="/img/google-play-badge" height="75"></a>
+<a href="https://play.google.com/store/apps/details?id=com.vbridgelal.zmonitor"><img src="/img/google-play-badge.png" height="75"></a>
 
 
 ## Screenshots
