@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private LibVLC mLibVLC = null;
     private ArrayList<VideoHelper> videoHelperArrayList;
 
+    private LinearLayout topLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(
                 AppCompatDelegate.MODE_NIGHT_YES);
 
-        LinearLayout topLayout = findViewById(R.id.top_layout);
+        topLayout = findViewById(R.id.top_layout);
         topLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,9 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     if (event.type==MediaPlayer.Event.Buffering){
                         buffered=event.getBuffering();
                     }
-                    if ((buffered==100.0) &&
-                            (event.type== MediaPlayer.Event.Vout) && // This seems to be last event before actual playing
-                            (cam1Player.getPlayerState()== VideoHelper.PLAYER_STATE.LIBVLC_PLAYING.ordinal())){
+                    if (buffered==100.0){
                         loadingBar1.setVisibility(View.GONE);
                         Log.d("EVENT",event.type+"");
                     }
@@ -133,9 +133,7 @@ public class MainActivity extends AppCompatActivity {
                     if (event.type==MediaPlayer.Event.Buffering){
                         buffered=event.getBuffering();
                     }
-                    if ((buffered==100.0) &&
-                            (event.type== MediaPlayer.Event.Vout) && // This seems to be last event before actual playing
-                            (cam2Player.getPlayerState()== VideoHelper.PLAYER_STATE.LIBVLC_PLAYING.ordinal())){
+                    if (buffered==100.0){
                         loadingBar2.setVisibility(View.GONE);
                         Log.d("EVENT",event.type+"");
                     }
@@ -167,9 +165,7 @@ public class MainActivity extends AppCompatActivity {
                     if (event.type==MediaPlayer.Event.Buffering){
                         buffered=event.getBuffering();
                     }
-                    if ((buffered==100.0) &&
-                            (event.type== MediaPlayer.Event.Vout) && // This seems to be last event before actual playing
-                            (cam3Player.getPlayerState()== VideoHelper.PLAYER_STATE.LIBVLC_PLAYING.ordinal())){
+                    if (buffered==100.0){
                         loadingBar3.setVisibility(View.GONE);
                         Log.d("EVENT",event.type+"");
                     }
@@ -201,9 +197,7 @@ public class MainActivity extends AppCompatActivity {
                     if (event.type==MediaPlayer.Event.Buffering){
                         buffered=event.getBuffering();
                     }
-                    if ((buffered==100.0) &&
-                            (event.type== MediaPlayer.Event.Vout) && // This seems to be last event before actual playing
-                            (cam4Player.getPlayerState()== VideoHelper.PLAYER_STATE.LIBVLC_PLAYING.ordinal())){
+                    if (buffered==100.0){
                         loadingBar4.setVisibility(View.GONE);
                         Log.d("EVENT",event.type+"");
                     }
@@ -213,6 +207,15 @@ public class MainActivity extends AppCompatActivity {
         streamCount++;
 
 
+    }
+
+    private void setCamViewWidth(int camId, int width, int height){
+        LinearLayout pcam=findViewById(camId);
+        ViewGroup.LayoutParams params = pcam.getLayoutParams();
+        // Changes the height and width to the specified *pixels*
+        params.height = width;
+        params.width = height;
+        pcam.setLayoutParams(params);
     }
 
     @Override

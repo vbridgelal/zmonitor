@@ -9,167 +9,192 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="50"
-        android:orientation="vertical"
-        android:weightSum="100">
+        android:weightSum="100"
+        android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/video_surface_frame"
+
+        <LinearLayout
+            android:id="@+id/pcam1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_height="0dp"
             android:layout_weight="50"
-            android:foregroundGravity="clip_horizontal|clip_vertical"
-            tools:ignore="true">
+            android:orientation="vertical">
 
-            <ViewStub
-                android:id="@+id/surface_stub"
+            <FrameLayout
+                android:id="@+id/video_surface_frame"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout="@layout/surface_view" />
-
-            <ViewStub
-                android:id="@+id/subtitles_surface_stub"
-                android:layout_width="1dp"
-                android:layout_height="1dp"
-                android:layout="@layout/surface_view" />
-
-            <ViewStub
-                android:id="@+id/texture_stub"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout="@layout/texture_view" />
-
-            <ProgressBar
-                android:id="@+id/loading1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:visibility="gone"
-                />
+                android:foregroundGravity="clip_horizontal|clip_vertical"
+                tools:ignore="true">
 
-        </FrameLayout>
+                <ViewStub
+                    android:id="@+id/surface_stub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout="@layout/surface_view" />
 
-        <FrameLayout
-            android:id="@+id/video_surface_frame2"
+                <ViewStub
+                    android:id="@+id/subtitles_surface_stub"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout="@layout/surface_view" />
+
+                <ViewStub
+                    android:id="@+id/texture_stub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout="@layout/texture_view" />
+
+                <ProgressBar
+                    android:id="@+id/loading1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pcam2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_height="0dp"
             android:layout_weight="50"
-            android:foregroundGravity="clip_horizontal|clip_vertical"
-            tools:ignore="true">
+            android:orientation="vertical">
 
-            <ViewStub
-                android:id="@+id/surface_stub2"
+            <FrameLayout
+                android:id="@+id/video_surface_frame2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout="@layout/surface_view" />
-
-            <ViewStub
-                android:id="@+id/subtitles_surface_stub2"
-                android:layout_width="1dp"
-                android:layout_height="1dp"
-                android:layout="@layout/surface_view" />
-
-            <ViewStub
-                android:id="@+id/texture_stub2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout="@layout/texture_view" />
-
-            <ProgressBar
-                android:id="@+id/loading2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:visibility="gone"
-                />
-        </FrameLayout>
+                android:foregroundGravity="clip_horizontal|clip_vertical"
+                tools:ignore="true">
+
+                <ViewStub
+                    android:id="@+id/surface_stub2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout="@layout/surface_view" />
+
+                <ViewStub
+                    android:id="@+id/subtitles_surface_stub2"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout="@layout/surface_view" />
+
+                <ViewStub
+                    android:id="@+id/texture_stub2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout="@layout/texture_view" />
+
+                <ProgressBar
+                    android:id="@+id/loading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="50"
-        android:baselineAligned="false"
-        android:orientation="vertical"
-        android:weightSum="100">
+        android:weightSum="100"
+        android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/video_surface_frame3"
+        <LinearLayout
+            android:id="@+id/pcam3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_height="0dp"
             android:layout_weight="50"
-            android:foregroundGravity="clip_horizontal|clip_vertical"
-            tools:ignore="true">
+            android:orientation="vertical">
 
-            <ViewStub
-                android:id="@+id/surface_stub3"
+            <FrameLayout
+                android:id="@+id/video_surface_frame3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout="@layout/surface_view" />
-
-            <ViewStub
-                android:id="@+id/subtitles_surface_stub3"
-                android:layout_width="1dp"
-                android:layout_height="1dp"
-                android:layout="@layout/surface_view" />
-
-            <ViewStub
-                android:id="@+id/texture_stub3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout="@layout/texture_view" />
-
-            <ProgressBar
-                android:id="@+id/loading3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:visibility="gone"
-                />
-        </FrameLayout>
+                android:layout_weight="50"
+                android:foregroundGravity="clip_horizontal|clip_vertical"
+                tools:ignore="true">
 
+                <ViewStub
+                    android:id="@+id/surface_stub3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout="@layout/surface_view" />
 
-        <FrameLayout
-            android:id="@+id/video_surface_frame4"
+                <ViewStub
+                    android:id="@+id/subtitles_surface_stub3"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout="@layout/surface_view" />
+
+                <ViewStub
+                    android:id="@+id/texture_stub3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout="@layout/texture_view" />
+
+                <ProgressBar
+                    android:id="@+id/loading3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pcam4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_height="0dp"
             android:layout_weight="50"
-            android:foregroundGravity="clip_horizontal|clip_vertical"
-            tools:ignore="true">
+            android:orientation="vertical">
 
-            <ViewStub
-                android:id="@+id/surface_stub4"
+            <FrameLayout
+                android:id="@+id/video_surface_frame4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout="@layout/surface_view" />
-
-            <ViewStub
-                android:id="@+id/subtitles_surface_stub4"
-                android:layout_width="1dp"
-                android:layout_height="1dp"
-                android:layout="@layout/surface_view" />
-
-            <ViewStub
-                android:id="@+id/texture_stub4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout="@layout/texture_view" />
-
-            <ProgressBar
-                android:id="@+id/loading4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:visibility="gone"
-                />
-        </FrameLayout>
+                android:layout_weight="50"
+                android:foregroundGravity="clip_horizontal|clip_vertical"
+                tools:ignore="true">
+
+                <ViewStub
+                    android:id="@+id/surface_stub4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout="@layout/surface_view" />
+
+                <ViewStub
+                    android:id="@+id/subtitles_surface_stub4"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout="@layout/surface_view" />
+
+                <ViewStub
+                    android:id="@+id/texture_stub4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout="@layout/texture_view" />
+
+                <ProgressBar
+                    android:id="@+id/loading4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>
